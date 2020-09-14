@@ -4,19 +4,20 @@ namespace Spoj
 {
     class Program
     {
+        // https://pl.spoj.com/problems/PRIME_T/
         static void Main(string[] args)
         {
             int howMany = int.Parse(Console.ReadLine());
-            int[] array = new int[howMany];
+            int[] tablica = new int[howMany];
 
             for (int i = 0; i < howMany; i++)
             {
-                array[i] = int.Parse(Console.ReadLine());
+                tablica[i] = int.Parse(Console.ReadLine());
             }
 
             for (int i = 0; i < howMany; i++)
             {
-                if (array[i] == 1)
+                if (tablica[i] == 1)
                 {
                     Console.WriteLine("NIE");
 
@@ -25,9 +26,9 @@ namespace Spoj
 
                 bool isPrime = true;
 
-                for (int j = 2; j < array[i]; j++)
+                for (int j = 2; j < tablica[i]; j++)
                 {
-                    if (array[i] % j == 0)
+                    if (tablica[i] % j == 0)
                     {
                         isPrime = false;
                         Console.WriteLine("NIE");
